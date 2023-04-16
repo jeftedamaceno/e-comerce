@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.cadastro-form{
+    box-shadow: 0 0 15px #afafaf;
+}
+.cadastro-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    border-radius: 1rem;
+    justify-content: center;
+}
+.cadastro-form form input{
+    border-radius: 9999px;
+    height: 40px;
+    width: 330px;
+    text-align: center;
+}
