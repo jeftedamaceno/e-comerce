@@ -3,20 +3,125 @@
     margin: 0;
     padding: 0;
 }
-.cadastro-form{
-    box-shadow: 0 0 15px #afafaf;
+body{
+    background-image: radial-gradient(#fff, #c7c7c7);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
 }
-.cadastro-form form{
+.container{
+    width: 85%;
+    margin-top: 15px;
+    background-color: #b6bec9;
+    box-shadow: 0 0 15px #929191;
+    display: flex;
+}
+.title{
+    margin: 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    position: absolute;
+}
+.form-image{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.form-image img{
+    width: 100%;
+}
+.form{
+    display: flex;
+    border-radius: 18px;
+    max-width: 50%;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form a{
+    text-decoration: none;
+}
+.form h1{
+    margin: 6px;
+    font-size: 3rem;
+}
+
+.form form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    text-align: center;
+    margin: 1rem;
     border-radius: 1rem;
-    justify-content: center;
+    
 }
-.cadastro-form form input{
+.form form input{
     border-radius: 9999px;
+    
+    margin: 0.8rem;
     height: 40px;
     width: 330px;
     text-align: center;
+}
+.form p{
+    display: flex;
+    flex-direction: column;
+}
+#checkbox-termos{
+    height: 20px;
+    width: 20px;
+}
+.termos-de-uso{
+    display: flex;
+    flex-direction: initial;
+}
+.termos-de-uso p{
+    align-items: flex-start
+}
+.button-cad{
+    background-color: #0084ff;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 3.8rem;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+.button-cad:hover{
+    background-color: #004c94;
+}
+
+@media (max-width:800px){
+    .title{
+        font-size: 1rem;
+    }
+
+    .form{
+        max-width: 90%;
+    }
+    .form h1{
+        font-size: 2rem;
+        margin: 1px;
+    }
+    .form form input{
+        width: 90%;
+        min-height: 30px;
+    }
+    .form-image{
+        display: none;
+    }
+    .form p{
+        text-align: justify;
+    }
+    /* .form a{
+        text-align: justify;
+    } */
 }

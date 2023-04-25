@@ -10,17 +10,15 @@
 <body>
     <div class="navbar">
         <div class="header-inner-content">
-            <h1 class="logo">Gamer <span>Store</span></h1>
+            <h1 class="logo">Nice <span>Store</span></h1>
             <form action="get">
                     <input type="text" placeholder="pesquisar">
             </form>
             <nav>
                 <ul>
-                    <li>cadastre-se</li>
+                    <a href="{{ route("cadastro_user") }}"><li>cadastre-se</li></a>
                     <li>entre</li>
                 </ul>
-            
-
             </nav>
             <div class="nav-icon-container">
                     <img src="imagens/cart.png">
