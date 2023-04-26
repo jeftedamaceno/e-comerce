@@ -12,4 +12,7 @@ class UserController extends Controller
     public function login(){
         return view('users.login');
     }
+    public function create_user(Request $request){
+        return redirect()->route('index');
+    }
 }
