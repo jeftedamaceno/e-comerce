@@ -26,6 +26,14 @@ body{
     display: flex;
     justify-content: center;
 }
+.title hr{
+    background-color: #3b3b3b;
+    width: 30%;
+    height: 10px;
+    position: relative;
+    top: 15px;
+    border-radius: 9999px;
+}
 .form-image{
     display: flex;
     width: 50%;
@@ -74,6 +82,7 @@ body{
 .form p{
     display: flex;
     flex-direction: column;
+    width: 350px;
 }
 #checkbox-termos{
     height: 20px;
@@ -131,12 +140,16 @@ body{
 
 }
 
-.title hr{
-    background-color: #3b3b3b;
-    width: 30%;
-    height: 10px;
-    position: relative;
-    top: 15px;
-    border-radius: 9999px;
+.errors{
+    background-color: #f7bbbb;
+    text-align: center;
+    list-style: none;
+    border-radius: 9px;
+}
+.error{
+    padding: 5px;
+}
+.error-input{
+    border-color: #f38787;
 }
 

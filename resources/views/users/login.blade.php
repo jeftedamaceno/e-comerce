@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="css/form.css">
-    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/global.css">
 </head>
 <body>
     <div class="title">
@@ -16,7 +16,7 @@
     </div>
     <div class="container" >
         <div class="form-image">
-            <img src="imagens/undraw_shopping_re_hdd9.svg" alt="">
+            <img src="/imagens/undraw_shopping_re_hdd9.svg" alt="">
         </div>
         <div class="form">
             <form action="" method="POST">

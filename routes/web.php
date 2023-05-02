@@ -7,10 +7,10 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('login', [UserController::class, 'login']
+Route::get('/users/login', [UserController::class, 'login']
 )->name('login');
 
-Route::get('cadastro_user', [UserController::class, 'cadastro_user']
+Route::get('/users/cadastro_user', [UserController::class, 'cadastro_user']
 )->name('cadastro_user');
 
-Route::post('users/create_user', [UserController::class, 'create_user'])->name('users.create_user');
+Route::post('/users', [UserController::class, 'store'])->name('users.store');
