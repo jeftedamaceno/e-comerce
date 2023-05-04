@@ -52,11 +52,17 @@ class StoreUpdateUserFormRequest extends FormRequest
     public function messages()
     {
         return [
-            'unique'=>'E-mail já cadastrado',
+            'name.min'=>'O nome deve conter no minimo 2 caracteres',
+            'name.max'=>'O nome deve conter no minimo 255 caracteres',
+            'email.unique'=>'E-mail já cadastrado',
+            'email.email'=>'Insira um e-mail valido',
             'required'=>'Este campo é obrigatorio',
-            'min'=>'A senha deve conter no minimo 6 caracteres',
-            'max'=>'A senha deve conter no maximo 20 caracteres',
-            'confirmed'=>'A confirmação do campo de senha não corresponde.'
+            'password.min'=>'A senha deve conter no minimo 6 caracteres',
+            'password.max'=>'A senha deve conter no maximo 20 caracteres',
+            'password.confirmed'=>'A confirmação do campo de senha não corresponde.',
+            'password_confirmation.min'=>'A senha deve conter no minimo 6 caracteres',
+            'password_confirmation.max'=>'A senha deve conter no maximo 20 caracteres',
+            'password_confirmation.confirmed'=>'A confirmação do campo de senha não corresponde.'
         ];
     }
 }

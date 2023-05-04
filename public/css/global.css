@@ -36,6 +36,9 @@ body {
     width: 330px;
     text-align: center;
 }
+.navbar nav a{
+    text-decoration: none;
+}
 
 .logo{
     color: #0084ff;

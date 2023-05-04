@@ -19,12 +19,46 @@
             <img src="/imagens/undraw_shopping_re_hdd9.svg" alt="">
         </div>
         <div class="form">
-            <form action="" method="POST">
+            <form action="{{route('users.auth')}}" method="POST">
+                @csrf
                 <h1 class="logo">Nice <span>Store</span></h1>
                 <label for="">E-mail</label>
-                <input type="e-mail" name="">
+                @if (session('danger'))
+                    <div class="invalid-feedback">
+                        <div class="errors">
+                            <ul class="errors">
+                                <div class="alert alert-danger" role="alert">
+                                    <li class="error">{{session('danger')}}</li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                @endif
+                <input type="email" name="email" @error('email') class="error-input" @enderror>
+                @error('email')
+                    <div class="invalid-feedback">
+                        <div class="errors">
+                            <ul class="errors">
+                                <div class="alert alert-danger" role="alert">
+                                    <li class="error">{{$message}}</li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                @enderror
                 <label for="">Senha</label>
-                <input type="password" name="">
+                <input type="password" name="password" @error('password') class="error-input" @enderror>
+                @error('password')
+                    <div class="invalid-feedback">
+                        <div class="errors">
+                            <ul class="errors">
+                                <div class="alert alert-danger" role="alert">
+                                    <li class="error">{{$message}}</li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                @enderror
                 <input type="submit" value="entrar" class="button-cad">
                 <p>
                     Ainda não tem conta?  <a href="{{ route("cadastro_user") }}">cadastre-se</a>

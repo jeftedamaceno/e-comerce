@@ -16,8 +16,17 @@
             </form>
             <nav>
                 <ul>
-                    <a href="{{ route("cadastro_user") }}"><li>cadastre-se</li></a>
-                    <a href="{{ route("login") }}"><li>entre</li></a>
+                    <a href=""><li>Trabalhe conosco</li></a>
+                    @if (!auth()->check())
+                        <a href="{{ route("cadastro_user") }}"><li>Cadastre-se</li></a>
+                        <a href="{{ route("login") }}"><li>Entre</li></a>
+                    @endif
+                    
+                    @if (auth()->check())
+                        {{-- <a href=""><li>Bem Vindo {{ auth()->user()->firstName }} </li></a> --}}
+                        <a href=""><li>Perfil</li></a>
+                        <a href="{{ route("users.logout") }}"><li>Sair</li></a>
+                    @endif
                 </ul>
             </nav>
             <div class="nav-icon-container">

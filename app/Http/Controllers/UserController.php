@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreUpdateUserFormRequest;
+use App\Http\Requests\AuthLoginUserFormRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -20,6 +22,18 @@ class UserController extends Controller
         $data['password'] = bcrypt($request->password);
         User::create($data);
         
+        return redirect()->route('index');
+    }
+    public function auth(AuthLoginUserFormRequest $request){
+        $credencias = $request->only('email', 'password');
+        if(Auth::attempt($credencias)){
+            return redirect()->route('index');
+        }else{
+            return redirect()->back()->with('danger', 'E-mail ou senha invalidos');
+        }
+    }
+    public function logout(){
+        Auth::logout();
         return redirect()->route('index');
     }
 }
