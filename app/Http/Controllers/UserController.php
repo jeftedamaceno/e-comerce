@@ -22,7 +22,7 @@ class UserController extends Controller
         $data['password'] = bcrypt($request->password);
         User::create($data);
         
-        return redirect()->route('index');
+        return redirect()->route('login');
     }
     public function auth(AuthLoginUserFormRequest $request){
         $credencias = $request->only('email', 'password');
@@ -35,5 +35,26 @@ class UserController extends Controller
     public function logout(){
         Auth::logout();
         return redirect()->route('index');
+    }
+
+    public function edit($id){
+        // if(!$id == auth()->user()->id){
+        //     return redirect()->route('users.edit');
+        // }
+        if(!$user = User::find($id)){
+            return redirect()-route('index');
+        }
+        return view('users.edit', compact('user'));
+    }
+    public function update(StoreUpdateUserFormRequest $request,$id){
+        if(!$user = User::find($id)){
+            return redirect()-route('index');
+        }
+        $data = $request->only('name', 'email');
+        if($request->password){
+            $data['password'] = bcrypt($request->password);
+        }
+        $user->update($data);
+       return redirect()->back();
     }
 }

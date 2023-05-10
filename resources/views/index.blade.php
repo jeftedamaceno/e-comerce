@@ -24,7 +24,7 @@
                     
                     @if (auth()->check())
                         {{-- <a href=""><li>Bem Vindo {{ auth()->user()->firstName }} </li></a> --}}
-                        <a href=""><li>Perfil</li></a>
+                        <a href="{{ route("users.edit", auth()->user()->id)}}"><li>Editar Perfil</li></a>
                         <a href="{{ route("users.logout") }}"><li>Sair</li></a>
                     @endif
                 </ul>

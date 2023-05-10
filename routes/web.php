@@ -18,3 +18,6 @@ Route::post('/users', [UserController::class, 'store'])->name('users.store');
 Route::post('/users/auth', [UserController::class, 'auth'])->name('users.auth');
 
 Route::get('users/logout', [UserController::class, 'logout'])->name('users.logout');
+
+Route::put('users/{id}', [UserController::class, 'update'])->name('users.update');
+Route::get('users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
