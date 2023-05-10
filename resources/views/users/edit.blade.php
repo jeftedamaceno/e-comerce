@@ -76,15 +76,7 @@
                         </div>
                     </div>
                 @enderror
-                <div class="termos-de-uso">
-                    <input type="checkbox" name="" id="checkbox-termos" required>
-                    <p>Ao criar uma conta, você concorda com os <a href="">termos de usu</a></p>
-                </div>
-                <input type="submit" value="continuar" class="button-cad">
-            
-                <p>
-                    Você já tem uma conta?  <a href="{{ route("login") }}">Fazer login</a>
-                </p>
+                <input type="submit" value="Editar" class="button-cad">
             </form>
         </div>
     </div>
