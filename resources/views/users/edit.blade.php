@@ -17,7 +17,7 @@
 
     <div class="container">
         <div class="form-image">
-            <img src="/imagens/undraw_shopping_app_flsj.svg" alt="">
+            <img src="/imagens/edit.svg" alt="">
         </div>
         <div class="form">
             <form action="{{ route('users.update',auth()->user()->id)}}" method="POST">

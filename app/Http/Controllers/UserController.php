@@ -38,13 +38,18 @@ class UserController extends Controller
     }
 
     public function edit($id){
-        // if(!$id == auth()->user()->id){
-        //     return redirect()->route('users.edit');
-        // }
-        if(!$user = User::find($id)){
-            return redirect()-route('index');
+        $user = User::find($id);
+        $user_id = auth()->user()->id;
+        $validacao=$id ==$user_id;
+        if($validacao == false){
+            return redirect()->route('users.edit',['id' => 1]);
         }
-        return view('users.edit', compact('user'));
+        if($id == $user_id){           
+            return view('users.edit', compact('user'));
+        }
+        if(!$user = User::find($id)){
+            return redirect()->route('index');
+        }
     }
     public function update(StoreUpdateUserFormRequest $request,$id){
         if(!$user = User::find($id)){
@@ -55,6 +60,6 @@ class UserController extends Controller
             $data['password'] = bcrypt($request->password);
         }
         $user->update($data);
-       return redirect()->back();
+        return redirect()->back();
     }
 }
