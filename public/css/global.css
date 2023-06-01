@@ -24,20 +24,51 @@ body {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    height: 60px;
+    height: 45px;
 }
 .navbar>div img{
     height: 50px;
 }
 
 .navbar form input{
-    border-radius: 9999px;
-    height: 40px;
+    border-radius: 30px;
+    height: 42px;
     width: 330px;
     text-align: center;
 }
 .navbar nav a{
     text-decoration: none;
+}
+
+.form-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-header form{
+    width: 75%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.form-header button{
+    background-color: transparent;
+    border: none;
+    margin:-40px;
+}
+#lupa{
+   height: 46px;
+   margin-top: 4px;
+}
+
+/* #form-header-input{
+    border-radius: 99px;
+    height: 10px;
+} */
+
+.categorys{
+    top: 10px;
+    margin: 10px;
 }
 
 .logo{

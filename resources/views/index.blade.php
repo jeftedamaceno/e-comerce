@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nice Store</title>
     <link rel="stylesheet" href="css/global.css">
+    <link rel="icon" type="image/x-icon" href="/imagens/nice store.png">
 </head>
 <body>
     <div class="navbar">
         <div class="header-inner-content">
             <h1 class="logo">Nice <span>Store</span></h1>
-            <form action="get">
-                    <input type="text" placeholder="pesquisar">
-            </form>
+            <div class="form-header">
+                <form action="get" action="">
+                    @csrf
+                    <input type="text" placeholder="pesquisar" >
+                    <button><img id="lupa" src="imagens/lupa2.png" alt=""></button>
+                </form>
+            </div>
             <nav>
                 <ul>
                     <a href=""><li>Trabalhe conosco</li></a>
@@ -23,17 +28,25 @@
                     @endif
                     
                     @if (auth()->check())
-                        {{-- <a href=""><li>Bem Vindo {{ auth()->user()->firstName }} </li></a> --}}
+                        <a href=""><li>Olá, {{ auth()->user()->name }} </li></a>
                         <a href="{{ route("users.edit", auth()->user()->id)}}"><li>Editar Perfil</li></a>
                         <a href="{{ route("users.logout") }}"><li>Sair</li></a>
                     @endif
                 </ul>
             </nav>
             <div class="nav-icon-container">
-                    <img src="imagens/cart.png">
-                    <img src="imagens/menu.png" class="menu-button">
-                </div>
+                <img src="imagens/cart.png">
+                <img src="imagens/menu.png" class="menu-button">
+            </div>
         </div>
+        <nav class="categorys">
+            <ul>
+                <a href=""><li> <img height="14px" src="imagens/menu.png" > Todos</li></a>
+                <a href=""><li>Eletronicos</li></a>
+                <a href=""><li>Mais vendidos</li></a>
+                <a href=""><li>Ofertas do dia</li></a>
+            </ul>
+        </nav>
     </div>
 
     <header>
@@ -56,7 +69,7 @@
     <main>
         <div class="gray-background">
             <div class="page-inner-content">
-                <h2>Produtos em Destaque</h2>
+              
                 <div class="cols cols-3">
                     <img src="imagens/products/product-1.png">
                     <img src="imagens/products/product-2.png">
