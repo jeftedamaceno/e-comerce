@@ -39,14 +39,14 @@
                 <img src="imagens/menu.png" class="menu-button">
             </div>
         </div>
-        <nav class="categorys">
+        {{-- <nav class="categorys">
             <ul>
                 <a href=""><li> <img height="14px" src="imagens/menu.png" > Todos</li></a>
                 <a href=""><li>Eletronicos</li></a>
                 <a href=""><li>Mais vendidos</li></a>
                 <a href=""><li>Ofertas do dia</li></a>
             </ul>
-        </nav>
+        </nav> --}}
     </div>
 
     <header>
